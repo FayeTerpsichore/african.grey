@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans&display=swap');
+
 body {
   background-color: rgba(190, 180, 159, 255);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 9fr 1fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#chat {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 18pt;
+  padding: 100pt;
+}
+
+#chat>span {
+  animation: flyup 1s;
+}
+
+#avatar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#disclaimer {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.user-input {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-top: 10pt;
+}
+
+.grey-output {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 10pt;
+}
+
+@keyframes flyup {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
