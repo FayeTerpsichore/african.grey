@@ -3,6 +3,8 @@
   <head>
     <title>Grey Terpsichore!</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="main.js"></script>
   </head>
   <body>
     <div id="app">
@@ -10,15 +12,17 @@
         <img src="avatars/main.png" />
       </div>
       <div id="chat">
-        <span class="user-input">Hi, Grey.</span>
-        <span class="grey-output">Hello! What can I do for you today?</span>
+        <div id="the-form">
+          <input type="text" id="msgbox" onkeydown="doEnter()">
+          <button id="submit" onclick="doButtonPress()">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
       </div>
-      <footer>
-        <span id="disclaimer">
-          Grey is not a real person. She is a chatbot connected to a robot arm.
-          Don't be mean.
-        </span>
-      </footer>
+      <span id="disclaimer">
+        Grey is not a real person. She is a chatbot connected to a robot arm.
+        Don't be mean.
+      </span>
     </div>
   </body>
 </html>
